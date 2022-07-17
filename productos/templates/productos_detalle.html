@@ -1,0 +1,56 @@
+{% extends "nav.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<!doctype html>
+
+    <section class="container p-5 bg-alto">
+        <br>
+
+        <h2 class="display-4 fw-bolder text-center p-3">{{object.nombre}} </h2>
+    
+        
+    
+        <div class="col mb-5 card-ancho s-ancho">
+            <div class="card h-100">
+                
+                
+        <br>
+        
+        
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <h5 class="fw-bolder"</h5>
+                        <!-- Product price-->
+                        <b>Tipo {{object.tipo}}</b>
+                        <div>
+                        <b>Precio: ${{object.precio}}</b>
+                        </div>
+                        <!-- Product image-->
+                            <div>
+                      <img class="card-img-top" src="{{object.imagen.url}}" alt="{{object.nombre}}" style= "width:30%;  margin-left: auto; margin-right: auto;" />
+                           </div>
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="verprods">Volver a catalogo</a></div>
+                </div>
+            </div>
+        </div>
+    
+        
+        
+    
+       
+    
+    
+    </section>
+     
+</body>
+</html>
+{%endblock%}

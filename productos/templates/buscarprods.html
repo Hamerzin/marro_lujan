@@ -1,0 +1,34 @@
+{% extends "nav.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Search</li>
+        </ol>
+        <h2>Busqueda</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    
+    <h2 class="display-4 fw-bolder text-center p-3">Buscar Producto</h2>
+    <form action="buscar" method="GET" class="container p-5 bg-alto">
+    <div class="searchbar text-center">
+        <input type="text" placeholder="Buscar Producto" name="nombre" id="nombre" class="form-label">
+        <input type="submit" value="Buscar" class="btn btn-dark">
+    </div>
+</form>
+
+{% block contenidoBuscar %}
+
+{% endblock %}
+
+{% endblock %}

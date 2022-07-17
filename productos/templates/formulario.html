@@ -1,0 +1,27 @@
+{% extends "nav.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Carga de nuevos productos</title> 
+</head> 
+<body> 
+    <br> 
+        <br> 
+            <br> 
+            <br> 
+            <h1>INGRESE EL PRODUCTO A CARGAR </h1>
+    <form method = "post" enctype="multipart/form-data"> 
+        {% csrf_token %} 
+        {{ form.as_p }} 
+        <button type="submit">Cargar y salir</button> 
+    </form> 
+</body> 
+</html> 
+
+{%endblock%}

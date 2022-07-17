@@ -1,0 +1,26 @@
+{% extends "nav.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+{%if user.is_authenticated%}
+<br>
+<br>
+<br>
+<br>
+<body>
+    <div style= "width: 200px; margin-left: auto; margin-right: auto;">
+    <form action="" method="post">{% csrf_token %}
+        <p>Esta segursado borrar el producto "{{ object.nombre }}"?</p>
+        <img src="{{ object.imagen.url }}" class="img-responsive" style="width: 70%; " />
+    
+        <input type="submit" value="Confirm" />
+        <button class="enlace" role="link" onclick="window.location='../verprods'">Cancelar</button>
+    </form>
+    
+</body>
+</div>
+{%else%}
+falso
+{%endif%}
+{%endblock%}
